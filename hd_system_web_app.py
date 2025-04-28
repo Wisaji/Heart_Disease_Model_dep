@@ -34,7 +34,7 @@ with open('naive_model_trained.sav', 'rb') as f:
 
 # Now, you can use the loaded model for predictions
 # creating a function for prediction
-def hearth_disease_prediction(input_data):
+def heart_disease_prediction(input_data):
 
     input_data_as_numpy_array= np.array(input_data)
 # reshaping the array for predicting 
@@ -102,7 +102,7 @@ def main():
     
     # creating  a prediction button
     if st.button("PREDICT"):
-        diagnosis = hearth_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
+        diagnosis = heart_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
     st.success(diagnosis)
     
  
